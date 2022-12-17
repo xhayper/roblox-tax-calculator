@@ -13,6 +13,14 @@ export default defineNuxtConfig({
           content:
             "Calculate the tax you will pay on your ROBLOX Marketplace sales.",
         },
+        {
+          name: "twitter:card",
+          content: "summary",
+        },
+        {
+          name: "twitter:creator",
+          content: "@hayper1919",
+        },
       ],
     },
   },
