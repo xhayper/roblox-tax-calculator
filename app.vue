@@ -11,17 +11,17 @@
       </div>
       <br>
       <div>
-        <span>Amount you are selling: {{ validatedAmount.toLocaleString() }} R$</span>
+        <span>Amount you are selling: {{ clampedAmount.toLocaleString() }} R$</span>
         <br>
-        <span>Amount you will get from selling: {{ sellingWithTax.toLocaleString() }} R$</span>
+        <span>Amount you will get from selling: {{ Math.floor(amountAfterSell).toLocaleString() }} R$</span>
         <br>
-        <span>Amount to sell including tax: {{ sellForIncludingTax }} R$</span>
+        <span>Amount to sell including tax: {{ Math.ceil(amountToSellWithTax) }} R$</span>
       </div>
       <br>
       <div>
-        <span>Formula #1 : {{ validatedAmount }} * 0.7 = {{ sellingWithTax }}</span>
+        <span>Formula #1 : {{ clampedAmount }} * 0.7 = {{ amountAfterSell }}</span>
         <br>
-        <span>Formula #2 : {{ validatedAmount }} * (10 / 7) = {{ sellForIncludingTax
+        <span>Formula #2 : {{ clampedAmount }} * (10 / 7) = {{ amountToSellWithTax
         }}</span>
       </div>
     </main>
@@ -45,9 +45,9 @@ const amount = useState("amount", () => 0);
 
 const clamp = (value: number, min: number, max: number): number => Math.min(Math.max(value, min), max);
 
-const validatedAmount = computed(() => typeof amount.value !== "number" || Number.isNaN(amount.value) ? 0 : clamp(amount.value, 0, 999999999));
+const clampedAmount = computed(() => typeof amount.value !== "number" || Number.isNaN(amount.value) ? 0 : clamp(amount.value, 0, 999999999));
 
-const sellingWithTax = computed(() => Math.floor(validatedAmount.value * 0.7));
+const amountAfterSell = computed(() => clampedAmount.value * 0.7);
 
-const sellForIncludingTax = computed(() => Math.ceil(validatedAmount.value * (10 / 7)));
+const amountToSellWithTax = computed(() => clampedAmount.value * (10 / 7));
 </script>
