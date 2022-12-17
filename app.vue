@@ -11,18 +11,18 @@
       </div>
       <br>
       <div>
-        <label>Amount of robux you are selling: {{ validatedAmount.toLocaleString() }} R$</label>
+        <span>Amount you are selling: {{ validatedAmount.toLocaleString() }} R$</span>
         <br>
-        <label>Amount you will get from selling: {{ sellingWithTax.toLocaleString() }} R$</label>
+        <span>Amount you will get from selling: {{ sellingWithTax.toLocaleString() }} R$</span>
         <br>
-        <label>Amount to sell including tax: {{ sellForIncludingTax }} R$</label>
+        <span>Amount to sell including tax: {{ sellForIncludingTax }} R$</span>
       </div>
       <br>
       <div>
-        <label>Formula #1 : {{ validatedAmount }} * 0.7 = {{ sellingWithTax }}</label>
+        <span>Formula #1 : {{ validatedAmount }} * 0.7 = {{ sellingWithTax }}</span>
         <br>
-        <label>Formula #2 : {{ validatedAmount }} * (10 / 7) = {{ sellForIncludingTax
-        }}</label>
+        <span>Formula #2 : {{ validatedAmount }} * (10 / 7) = {{ sellForIncludingTax
+        }}</span>
       </div>
     </main>
     <br>
