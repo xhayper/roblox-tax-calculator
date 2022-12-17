@@ -24,16 +24,18 @@
     <br>
     <br>
     <footer>
-      <a href="https://github.com/xhayper/roblox-tax-calculator/" target="_blank" rel="noreferrer noopener">Source
-        code</a>
-      <br>
       <a href="https://roblox-tax-calculator.moopro2.repl.co/" target="_blank" rel="noreferrer noopener">Original
         site</a>
+      <br>
+      <a href="https://github.com/xhayper/roblox-tax-calculator/" target="_blank" rel="noreferrer noopener">Source
+        code</a>
     </footer>
   </div>
 </template>
 
 <script setup lang="ts">
+import "water.css/out/dark.min.css";
+
 const amount = useState("amount", () => 0);
 
 const clamp = (value: number, min: number, max: number): number => Math.min(Math.max(value, min), max);
