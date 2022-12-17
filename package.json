@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxi build",
+    "build": "nuxi typecheck && nuxi build",
     "dev": "nuxi dev",
-    "generate": "nuxi generate",
+    "generate": "nuxi typecheck && nuxi generate",
     "preview": "nuxi preview",
     "postinstall": "nuxi prepare"
   },
