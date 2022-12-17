@@ -11,17 +11,17 @@
       </div>
       <br>
       <div>
-        <label>Amount of robux you are selling: {{ validatedAmount.toLocaleString() }}R$</label>
+        <label>Amount of robux you are selling: {{ validatedAmount.toLocaleString() }} R$</label>
         <br>
-        <label>Amount you will get from selling: {{ sellingWithTax.toLocaleString() }}R$</label>
+        <label>Amount you will get from selling: {{ sellingWithTax.toLocaleString() }} R$</label>
         <br>
-        <label>Amount to sell including tax: {{ sellForIncludingTax.toLocaleString() }}R$</label>
+        <label>Amount to sell including tax: {{ sellForIncludingTax }} R$</label>
       </div>
       <br>
       <div>
-        <label>Formula #1 : {{ validatedAmount.toLocaleString() }} * 0.7 = {{ sellingWithTax.toLocaleString() }}</label>
+        <label>Formula #1 : {{ validatedAmount }} * 0.7 = {{ sellingWithTax }}</label>
         <br>
-        <label>Formula #2 : {{ validatedAmount.toLocaleString() }} * (10 / 7) = {{ sellForIncludingTax.toLocaleString()
+        <label>Formula #2 : {{ validatedAmount }} * (10 / 7) = {{ sellForIncludingTax
         }}</label>
       </div>
     </main>
@@ -29,7 +29,7 @@
     <footer>
       <div>
         <a href="https://roblox-tax-calculator.moopro2.repl.co/" target="_blank" rel="noreferrer noopener">Original
-          site</a>
+          site (not by me)</a>
         <br>
         <a href="https://github.com/xhayper/roblox-tax-calculator/" target="_blank" rel="noreferrer noopener">Source
           code</a>
