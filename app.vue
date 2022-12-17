@@ -4,31 +4,36 @@
       <h1>ROBLOX MarketPlace Tax Calculator</h1>
     </header>
     <main>
-      <label for="robuxAmount">Amount:</label>
+      <div>
+        <label for="robuxAmount">Selling amount:</label>
+        <br>
+        <input id="robuxAmount" v-model.number="amount">
+      </div>
       <br>
-      <input id="robuxAmount" v-model.number="amount">
+      <div>
+        <label>Amount of robux you are selling: {{ validatedAmount.toLocaleString() }}R$</label>
+        <br>
+        <label>Amount you will get from selling: {{ sellingWithTax.toLocaleString() }}R$</label>
+        <br>
+        <label>Amount to sell including tax: {{ sellForIncludingTax.toLocaleString() }}R$</label>
+      </div>
       <br>
-      <br>
-      <label>Amount of robux you are selling: {{ validatedAmount.toLocaleString() }}R$</label>
-      <br>
-      <label>Amount you will get from selling: {{ sellingWithTax.toLocaleString() }}R$</label>
-      <br>
-      <label>Amount to sell for including tax: {{ sellForIncludingTax.toLocaleString() }}R$</label>
-      <br>
-      <br>
-      <label>Formula #1 : {{ validatedAmount.toLocaleString() }} * 0.7 = {{ sellingWithTax.toLocaleString() }}</label>
-      <br>
-      <label>Formula #2 : {{ validatedAmount.toLocaleString() }} * (10 / 7) = {{ sellForIncludingTax.toLocaleString()
-      }}</label>
+      <div>
+        <label>Formula #1 : {{ validatedAmount.toLocaleString() }} * 0.7 = {{ sellingWithTax.toLocaleString() }}</label>
+        <br>
+        <label>Formula #2 : {{ validatedAmount.toLocaleString() }} * (10 / 7) = {{ sellForIncludingTax.toLocaleString()
+        }}</label>
+      </div>
     </main>
     <br>
-    <br>
     <footer>
-      <a href="https://roblox-tax-calculator.moopro2.repl.co/" target="_blank" rel="noreferrer noopener">Original
-        site</a>
-      <br>
-      <a href="https://github.com/xhayper/roblox-tax-calculator/" target="_blank" rel="noreferrer noopener">Source
-        code</a>
+      <div>
+        <a href="https://roblox-tax-calculator.moopro2.repl.co/" target="_blank" rel="noreferrer noopener">Original
+          site</a>
+        <br>
+        <a href="https://github.com/xhayper/roblox-tax-calculator/" target="_blank" rel="noreferrer noopener">Source
+          code</a>
+      </div>
     </footer>
   </div>
 </template>
