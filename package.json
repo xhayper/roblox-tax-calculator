@@ -13,5 +13,5 @@
     "vue-tsc": "^1.0.13",
     "water.css": "^2.1.1"
   },
-  "packageManager": "yarn@3.3.0"
+  "packageManager": "pnpm@7.18.2"
 }
