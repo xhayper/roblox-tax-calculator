@@ -15,7 +15,7 @@
         <br>
         <span>Amount you will get from selling: {{ Math.floor(amountAfterSell).toLocaleString() }} R$</span>
         <br>
-        <span>Amount to sell including tax: {{ Math.ceil(amountToSellWithTax) }} R$</span>
+        <span>Amount to sell including tax: {{ Math.floor(amountToSellWithTax) }} R$</span>
       </div>
       <br>
       <div>
