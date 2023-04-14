@@ -8,7 +8,10 @@
     name="description"
     content="Calculate the tax that you have to pay when putting item in the market place and find the amount you need to put to get the correct amount"
   />
-  <meta name="keywords" content="roblox, robux, marketplace, shirt, pants, decal, gamepasses, gamepass, tax" />
+  <meta
+    name="keywords"
+    content="roblox, robux, marketplace, shirt, pants, decal, gamepasses, gamepass, tax, calculator"
+  />
 
   <meta name="og:title" content="Roblox Tax Calculator" />
   <meta
