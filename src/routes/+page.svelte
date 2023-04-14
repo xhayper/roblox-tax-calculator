@@ -13,7 +13,7 @@
     content="roblox, robux, marketplace, shirt, pants, decal, gamepasses, gamepass, tax, calculator"
   />
 
-  <meta name="og:title" content="Roblox Tax Calculator" />
+  <meta name="og:title" content="Roblox Marketplace Calculator" />
   <meta
     name="og:description"
     content="Calculate the marketplace tax that you have to pay when selling an item or find the amount you need to put to get the correct amount"
