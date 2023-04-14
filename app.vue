@@ -1,13 +1,28 @@
+<script setup lang="ts">
+import "water.css/out/dark.min.css";
+
+const amount = useState("amount", () => 0);
+
+const clamp = (value: number, min: number, max: number): number => Math.min(Math.max(value, min), max);
+
+const clampedAmount = computed(() => typeof amount.value !== "number" || Number.isNaN(amount.value) ? 0 : clamp(amount.value, 0, 999999999));
+
+const amountAfterSell = computed(() => clampedAmount.value * 0.7);
+
+const amountToSellWithTax = computed(() => clampedAmount.value * (10 / 7));
+</script>
+
 <template>
   <div>
     <header>
-      <h1>ROBLOX MarketPlace Tax Calculator</h1>
+      <h1>ROBLOX Tax Calculator</h1>
     </header>
     <main>
       <div>
         <label for="robuxAmount">Selling amount:</label>
         <br>
-        <input id="robuxAmount" v-model.number="amount">
+        <input type="number" min="0" max="999999999" required aria-valuemin="0" aria-valuemax="999999999"
+          aria-required="true" id="robuxAmount" v-model.number="amount">
       </div>
       <br>
       <div>
@@ -37,17 +52,3 @@
     </footer>
   </div>
 </template>
-
-<script setup lang="ts">
-import "water.css/out/dark.min.css";
-
-const amount = useState("amount", () => 0);
-
-const clamp = (value: number, min: number, max: number): number => Math.min(Math.max(value, min), max);
-
-const clampedAmount = computed(() => typeof amount.value !== "number" || Number.isNaN(amount.value) ? 0 : clamp(amount.value, 0, 999999999));
-
-const amountAfterSell = computed(() => clampedAmount.value * 0.7);
-
-const amountToSellWithTax = computed(() => clampedAmount.value * (10 / 7));
-</script>
