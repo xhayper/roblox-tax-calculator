@@ -3,10 +3,10 @@
 </script>
 
 <svelte:head>
-  <title>Roblox Tax Calculator</title>
+  <title>Roblox Marketplace Calculator</title>
   <meta
     name="description"
-    content="Calculate the tax that you have to pay when putting item in the market place and find the amount you need to put to get the correct amount"
+    content="Calculate the marketplace tax that you have to pay when selling an item or find the amount you need to put to get the correct amount"
   />
   <meta
     name="keywords"
@@ -16,7 +16,7 @@
   <meta name="og:title" content="Roblox Tax Calculator" />
   <meta
     name="og:description"
-    content="Calculate the tax that you have to pay when putting item in the market place and find the amount you need to put to get the correct amount"
+    content="Calculate the marketplace tax that you have to pay when selling an item or find the amount you need to put to get the correct amount"
   />
   <meta name="og:url" content="https://roblox-tax-calculator-xhayper.vercel.app/" />
 
