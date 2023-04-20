@@ -11,6 +11,8 @@
 
   $: amountAfterSell = clampedAmount * 0.7;
   $: amountToSellWithTax = clampedAmount * (10 / 7);
+  $: roundedAmountAfterSell = amountAfterSell % 1 > .75 ? Math.ceil(amountAfterSell) : Math.floor(amountAfterSell)
+  $: roundedAmountToSellWithTax = amountToSellWithTax % 1 > .75 ? Math.ceil(amountToSellWithTax) : Math.floor(amountToSellWithTax)
 </script>
 
 <div>
@@ -32,9 +34,9 @@
 <div>
   <span>Amount you are selling: {clampedAmount.toLocaleString()} R$</span>
   <br />
-  <span>Amount you will get from selling: {Math.floor(amountAfterSell).toLocaleString()} R$</span>
+  <span>Amount you will get from selling: {roundedAmountAfterSell.toLocaleString()} R$</span>
   <br />
-  <span>Amount to sell including tax: {Math.floor(amountToSellWithTax)} R$</span>
+  <span>Amount to sell including tax: {roundedAmountToSellWithTax} R$</span>
 </div>
 <br />
 <div>
