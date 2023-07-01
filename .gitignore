@@ -6,15 +6,5 @@ node_modules
 .env
 .env.*
 !.env.example
-.vercel
-.output
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
-
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
